@@ -4,7 +4,7 @@
     --secondary-color: #2c4755;
     --section-padding: 60px;
     --section-background: #f6f6f6;
-    --main-duration: 0.5s;
+    --main-duration: 0.4s;
 }
 
 /* End variables */
@@ -15,10 +15,23 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Work Sans", sans-serif;
 }
 
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.padd-2 {
+    padding: var(--section-padding) 0px;
+    background-color: var(--section-background);
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -60,7 +73,6 @@ body {
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
-    /* background-color: #eee; */
 }
 
 /* End Global Rules */
@@ -137,7 +149,7 @@ body {
 
 .header .links .icon span:nth-child(2) {
     width: 60%;
-    transition: 0.4s;
+    transition: var(--main-duration);
 }
 
 .header .links .icon span:last-child {
@@ -176,7 +188,7 @@ body {
     padding: 10px;
     text-decoration: none;
     color: #333;
-    transition: 0.4s;
+    transition: var(--main-duration);
 }
 
 .header .links ul li a:hover {
@@ -225,14 +237,7 @@ body {
 /* End landing section */
 
 /* Start features */
-.features {
-    padding: var(--section-padding) 0px;
-    background-color: var(--section-background);
-}
-
 .features .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
@@ -266,8 +271,6 @@ body {
 }
 
 .services .services-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 100px;
 }
@@ -342,14 +345,7 @@ body {
 /* End Services */
 
 /* Start Portfolio */
-.portfolio {
-    padding: var(--section-padding) 0px;
-    background-color: var(--section-background);
-}
-
 .portfolio .portfolio-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 80px;
 }
@@ -381,7 +377,7 @@ body {
 /* Start About */
 .about {
     padding-top: var(--section-padding);
-    padding-bottom: (var(--section-padding + 60px));
+    padding-bottom: calc(var(--section-padding) + 60px);
 }
 
 .about .about-content {
@@ -470,11 +466,6 @@ body {
 /* End About */
 
 /* Start Contact */
-.contact {
-    padding: var(--section-padding) 0px;
-    background-color: var(--section-background);
-}
-
 .contact .info {
     padding: var(--section-padding) 0px;
     text-align: center;
