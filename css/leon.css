@@ -227,7 +227,7 @@ body {
 /* Start features */
 .features {
     padding: var(--section-padding) 0px;
-    background-color: #f6f6f6;
+    background-color: var(--section-background);
 }
 
 .features .container {
@@ -339,3 +339,39 @@ body {
     }
 }
 /* End Services */
+
+/* Start Portfolio */
+.portfolio {
+    padding: var(--section-padding) 0px;
+    background-color: var(--section-background);
+}
+
+.portfolio .portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 80px;
+}
+
+.portfolio .portfolio-content .card {
+    background-color: white;
+}
+
+.portfolio .portfolio-content .card img {
+    max-width: 100%;
+}
+
+.portfolio .portfolio-content .card .info {
+    padding: 20px;
+}
+
+.portfolio .portfolio-content .card .info h3 {
+    margin: 0;
+}
+
+.portfolio .portfolio-content .card .info p {
+    color: var(--secondary-color);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+/* End Portfolio */
